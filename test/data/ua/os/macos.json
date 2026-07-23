@@ -41,7 +41,7 @@
         "expect"  :
         {
             "name"    : "macOS",
-            "version" : "26.5"
+            "version" : "10.15.7"
         }
     }
 ]

@@ -1298,9 +1298,7 @@
             case OS:
                 // Since iOS 26, Safari's UA reports the OS version as frozen at 18:
                 // https://webkit.org/blog/17333/webkit-features-in-safari-26-0/#update-to-ua-string
-                if (this.get(NAME) == 'iOS' && this.get(VERSION) && /^1[89][^\d]/.exec(this.get(VERSION)) || 
-                    // also on macOS 26, Safari reports the OS version as frozen at 10.15.7
-                    this.get(NAME) == 'macOS' && this.get(VERSION) == '10.15.7') {
+                if (this.get(NAME) == 'iOS' && this.get(VERSION) && /^1[89][^\d]/.exec(this.get(VERSION))) {
                     // Based on the assumption that "iOS" version is tightly coupled with "Safari" version
                     var realVersion = /\) Version\/((\d+)[\d\.]*)/.exec(this.ua);
                     if (realVersion && parseInt(realVersion[2], 10) >= 26) {
